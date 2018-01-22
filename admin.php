@@ -5,8 +5,8 @@ require_once('Models/Graph.php');
 
 
 $view = new stdClass();
-$model = new Admin();
-$gr = new Graph();
+//$model = new Admin();
+//$gr = new Graph();
 
 $grdata = null;
 
