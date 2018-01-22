@@ -12,7 +12,7 @@
 
 final class database
 {
-    public $db; //PDO object which contains the database
+    private $db; //PDO object which contains the database
     private $statement; //the current prepared query to be executed by execute()
 
     //Database details
@@ -45,7 +45,7 @@ final class database
     public function query($query){
         $q = $query;
         $this->statement = $this->db->prepare($q);
-        if ($this->statement == false){echo 'query not prepared';}
+//        if ($this->statement == false){echo 'query not prepared';}
     }
 
     /** Executes the prepared query

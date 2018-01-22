@@ -18,7 +18,7 @@ class Graph
     /**
      * Graph constructor creating a new object with connection to the database.
      */
-    function __construct()
+    public function __construct()
     {
         $this->conn = database::Instance();
     }
@@ -27,7 +27,7 @@ class Graph
      * @param $statement - SQL statement to be executed
      * @return array - Array of all the records retrieved
      */
-    function getData($statement){
+    private function getData($statement){
         $this->conn->query($statement);
         $data = $this->conn->resultSet();
         return $data;
@@ -39,7 +39,7 @@ class Graph
      * @param $label2 - Selection in field two
      * @return string - JSON encoded data
      */
-    function getJson2fields($statement, $label1, $label2){
+    public function getJson2fields($statement, $label1, $label2){
 
         $result = $this->getData($statement);
 
@@ -87,7 +87,7 @@ class Graph
      * @param $label3 - Selection in field three
      * @return string - JSON encoded data
      */
-    function getJson3fields($statement, $label1, $label2, $label3){
+    public function getJson3fields($statement, $label1, $label2, $label3){
         $result = $this->getData($statement);
 
         $rows = array();
