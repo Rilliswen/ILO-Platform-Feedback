@@ -10,8 +10,9 @@ $gr = new Graph();
 
 $grdata = null;
 
-//if two of the fields are set
+echo 'I am here now';
 if (isset($_POST['var1']) && isset($_POST['var2'])) {
+    echo 'I am in the loop';
     //and if third field is set as well
     if (isset($_POST['var3']) && $_POST['var3'] != "") {
         $query = 'SELECT ' . $_POST['var1'] . ', ' . $_POST['var2'] . ', ' . $_POST['var3'] . ' FROM review ' . $_POST['group'];
