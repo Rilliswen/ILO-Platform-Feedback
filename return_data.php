@@ -5,7 +5,7 @@
  * Date: 1/22/18
  * Time: 11:43 AM
  */
-$require_once('Models/Graph.php');
+require_once('Models/Graph.php');
 require_once('Models/Admin.php');
 $gr = new Graph();
 $model = new Admin();
