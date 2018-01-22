@@ -53,8 +53,8 @@ if (isset($_POST['country-selection-admin'])){
 }
 
 session_start();
-if ($_SESSION['isSignedIn']) {
-    require_once('Views/admin.phtml');
-} else {
-    header('Location: login.php');
-}
+//if ($_SESSION['isSignedIn']) {
+//    require_once('Views/admin.phtml');
+//} else {
+//    header('Location: login.php');
+//}
