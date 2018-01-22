@@ -8,7 +8,7 @@ $view = new stdClass();
 //$model = new Admin();
 //$gr = new Graph();
 
-$grdata = null;
+//$grdata = null;
 
 ////if two of the fields are set
 //if (isset($_POST['var1']) && isset($_POST['var2'])) {

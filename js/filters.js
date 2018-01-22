@@ -71,12 +71,12 @@ function drawBarChart(jsontable) {
         var barchart_options;
         if (rowcount > 15){
             barchart_options =
-        {
-            title: '',
-            width: 1500,
-            chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
-            height: 600,
-        };
+            {
+                title: '',
+                width: 1500,
+                chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
+                height: 600,
+            };
         }
         else{
             barchart_options =
