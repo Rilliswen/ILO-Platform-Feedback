@@ -156,10 +156,8 @@ body{
     background-color: white;
 }
 #chart_div{
-    max-width: 55vw;
-    overflow-x: scroll;
     display: inline-block;
-    margin: 0;
+    margin: auto;
 }
 .sec1{
 display: inline-block;
@@ -167,7 +165,8 @@ max-height: 80vh;
 }
 .sec2{
     display: inline-block;
-    background-color: white;
+    /*background-color: white;*/
+    width:55%;
 }
 .wrap-wrap{
     display: block;
@@ -324,4 +323,13 @@ max-height: 80vh;
 {
     height: auto;
     margin-bottom: 10px;
+}
+
+.formstyless{
+    width: 100%;
+}
+
+.buttonstyle{
+    width:48%;
+    margin: 5px 0 10px 0;
 }

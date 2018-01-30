@@ -11,6 +11,7 @@ function updateTable()
 }
 
 function searchByPlatform() {
+
     // Declare variables
     var input, filter, table, tr, td, i;
     input = document.getElementById("platformInput");
@@ -62,7 +63,6 @@ function searchByWage()
 /**
  * CHART FILTERS
  */
-
 function drawBarChart(jsontable) {
     google.charts.load('43', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(function () {
@@ -71,21 +71,23 @@ function drawBarChart(jsontable) {
         var barchart_options;
         if (rowcount > 15){
             barchart_options =
-            {
-                title: '',
-                width: 1500,
-                chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
-                height: 600,
-            };
+ 
+                {
+                    title: '',
+                    width: 1500,
+                    chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
+                    height: 600,
+                };
+
         }
         else{
             barchart_options =
-            {
-                title: '',
-                width: 900,
-                chartArea: {left: 30, top:5, width: '80%', height: '80%'},
-                height: 600,
-            };
+                {
+                    title: '',
+                    width: 700,
+                    chartArea: {left: 30, top:5, width: '80%', height: '80%'},
+                    height: 600,
+                };
         }
         var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
         chart.draw(data, barchart_options);
@@ -100,21 +102,21 @@ function drawPieChart(jsontable) {
         var barchart_options;
         if (rowcount > 15){
             barchart_options =
-            {
-                title: '',
-                width: 1500,
-                chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
-                height: 600,
-            };
+                {
+                    title: '',
+                    width: 1500,
+                    chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
+                    height: 600,
+                };
         }
         else{
             barchart_options =
-            {
-                title: '',
-                width: 900,
-                chartArea: {left: 30, top:5, width: '80%', height: '80%'},
-                height: 600,
-            };
+                {
+                    title: '',
+                    width: 700,
+                    chartArea: {left: 30, top:5, width: '80%', height: '80%'},
+                    height: 600,
+                };
         }
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, barchart_options);
@@ -128,21 +130,21 @@ function drawAreaChart(jsontable) {
         var barchart_options;
         if (rowcount > 15){
             barchart_options =
-            {
-                title: '',
-                width: 1500,
-                chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
-                height: 600,
-            };
+                {
+                    title: '',
+                    width: 1500,
+                    chartArea: { left: 30, top: 5, width: '80%', height: '80%'},
+                    height: 600,
+                };
         }
         else{
             barchart_options =
-            {
-                title: '',
-                width: 900,
-                chartArea: {left: 30, top:5, width: '80%', height: '80%'},
-                height: 600,
-            };
+                {
+                    title: '',
+                    width: 700,
+                    chartArea: {left: 30, top:5, width: '80%', height: '80%'},
+                    height: 600,
+                };
         }
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
         chart.draw(data, barchart_options);

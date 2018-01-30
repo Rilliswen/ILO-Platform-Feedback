@@ -1,11 +1,16 @@
 <?php
 session_start();
+if(isset($_SESSION['isSignedIn']))
+    if($_SESSION['isSignedIn'])
+    {
+        header('Location: admin.php');
+    }
 
 require_once('Models/Login.php');
 if(isset($_POST['submit']))
 {
-    echo $userEmail = $_POST['username'];
-    echo $userPassword = hash("md2", $_POST['password']);
+    $userEmail = $_POST['username'];
+    $userPassword = $_POST['password'];
     $loginModel = new Login();
     $auth = $loginModel->signIn($userEmail, $userPassword);
     if($auth)
